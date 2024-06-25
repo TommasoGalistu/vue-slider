@@ -16,7 +16,7 @@
     <body>
     
         <div id="container">
-            <div class="contFoto">
+            <div class="contFoto" @mouseover="stop">
                 <div class="contTestoDescr">
                     <h4 id="titleSuper">{{slides[posIndex].title}}</h4>
                     <p id="testoSuper">{{slides[posIndex].text}}</p>
@@ -25,7 +25,7 @@
                 <img class="fotoPrincipale" :src="slides[posIndex].image" :alt="slides[posIndex].title">
                 
             </div>
-            <div class="contFotoPiccole">
+            <div class="contFotoPiccole" @mouseover="stop">
                 <!-- immmagini creazione dinamica -->
                 <img class="fotoPrincipale2" :class="posIndex === index ? 'active' : ''" :src="items.image" alt="" v-for="(items, index) in slides" @click="cambiaImmagine(index)">
                

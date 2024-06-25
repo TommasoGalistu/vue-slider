@@ -46,6 +46,7 @@ createApp({
             }
         },
         cambiaImmagine(index){
+            this.stop()
             this.posIndex = index;
         },
         startAuto(){
