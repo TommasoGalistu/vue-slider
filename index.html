@@ -18,20 +18,17 @@
         <div id="container">
             <div class="contFoto">
                 <div class="contTestoDescr">
-                    <h4 id="titleSuper">Title</h4>
-                    <p id="testoSuper">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <h4 id="titleSuper">{{slides[posIndex].title}}</h4>
+                    <p id="testoSuper">{{slides[posIndex].text}}</p>
                 </div>
                 <!-- immagini creazione dinamica -->
-                <img class="fotoPrincipale" src="img/01.webp" alt="foto di Marvel's Spiderman Miles Morales">
+                <img class="fotoPrincipale" :src="slides[posIndex].image" :alt="slides[posIndex].title">
                 
             </div>
             <div class="contFotoPiccole">
                 <!-- immmagini creazione dinamica -->
-                <img class="fotoPrincipale2 active" src="img/01.webp" alt="foto di Ratchet &amp; Clank: Rift Apart">
-                <img class="fotoPrincipale2" src="img/02.webp" alt="foto di Ratchet &amp; Clank: Rift Apart">
-                <img class="fotoPrincipale2" src="img/03.webp" alt="foto di Ratchet &amp; Clank: Rift Apart">
-                <img class="fotoPrincipale2" src="img/04.webp" alt="foto di Ratchet &amp; Clank: Rift Apart">
-                <img class="fotoPrincipale2" src="img/05.webp" alt="foto di Ratchet &amp; Clank: Rift Apart">
+                <img class="fotoPrincipale2" :src="items.image" alt="" v-for="(items, index) in slides">
+               
                  <div class="freccia">
                     <i class="fa-solid fa-arrow-up buttonIndietro"></i>
                     
@@ -48,6 +45,5 @@
             </div>
         </div>
         <script src="js/myjs.js"></script>
-        <script src="bonus/bonus.js"></script>
     </body>
 </html>
