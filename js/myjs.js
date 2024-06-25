@@ -27,6 +27,8 @@ createApp({
                     }
                 ],
             posIndex: 0,
+            inizioAutomatico: '',
+            inizioInverso: '',
 
         }
     },
@@ -47,9 +49,16 @@ createApp({
             this.posIndex = index;
         },
         startAuto(){
-            setInterval(() =>{
-                this.posIndex++
-            }, 2000)
+            this.stop()
+            this.inizioAutomatico = setInterval(this.avanti, 2000)
+        },
+        stop(){
+            clearInterval(this.inizioAutomatico)
+            clearInterval(this.inizioInverso)
+        },
+        inverti(){
+            this.stop()
+            this.inizioInverso = setInterval(this.indietro, 2000)
         }
     },
     mounted(){
