@@ -45,6 +45,11 @@ createApp({
         },
         cambiaImmagine(index){
             this.posIndex = index;
+        },
+        startAuto(){
+            setInterval(() =>{
+                this.posIndex++
+            }, 2000)
         }
     },
     mounted(){
