@@ -29,11 +29,11 @@
                 <!-- immmagini creazione dinamica -->
                 <img class="fotoPrincipale2" :class="posIndex === index ? 'active' : ''" :src="items.image" alt="" v-for="(items, index) in slides">
                
-                 <div class="freccia">
+                 <div class="freccia" @click="indietro">
                     <i class="fa-solid fa-arrow-up buttonIndietro"></i>
                     
                  </div>
-                 <div class="freccia bassa">
+                 <div class="freccia bassa" @click="avanti">
                     
                     <i class="fa-solid fa-arrow-down buttonAvanti"></i>
                  </div>

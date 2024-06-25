@@ -31,10 +31,21 @@ createApp({
         }
     },
     methods: {
-
+        avanti(){
+            this.posIndex++;
+            if(this.posIndex > this.slides.length - 1){
+                this.posIndex = 0;
+            }
+        },
+        indietro(){
+            this.posIndex--;
+            if(this.posIndex < 0){
+                this.posIndex = this.slides.length - 1;
+            }
+        }
     },
     mounted(){
-
+        
     }
     
 }
