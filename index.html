@@ -27,7 +27,7 @@
             </div>
             <div class="contFotoPiccole">
                 <!-- immmagini creazione dinamica -->
-                <img class="fotoPrincipale2" :class="posIndex === index ? 'active' : ''" :src="items.image" alt="" v-for="(items, index) in slides">
+                <img class="fotoPrincipale2" :class="posIndex === index ? 'active' : ''" :src="items.image" alt="" v-for="(items, index) in slides" @click="cambiaImmagine(index)">
                
                  <div class="freccia" @click="indietro">
                     <i class="fa-solid fa-arrow-up buttonIndietro"></i>

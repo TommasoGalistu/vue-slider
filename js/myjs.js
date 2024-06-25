@@ -42,6 +42,9 @@ createApp({
             if(this.posIndex < 0){
                 this.posIndex = this.slides.length - 1;
             }
+        },
+        cambiaImmagine(index){
+            this.posIndex = index;
         }
     },
     mounted(){
